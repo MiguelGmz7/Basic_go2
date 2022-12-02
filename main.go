@@ -13,7 +13,7 @@ type Manager struct {
 }
 
 func EncodeManager(manager *Manager) (io.Reader, error) {
-	err := json.Marshal(manager)
+	e, err := json.Marshal(manager)
 	if e, err != nil {
 		fmt.Println(err)
 		return
